@@ -90,19 +90,22 @@ function ProjectDetail({ project, onClose }) {
             </div>
 
             {project.images?.length > 0 && (
-              <div className="grid gap-3 sm:grid-cols-2">
+              <div className={`grid gap-3 ${project.images.length === 1 ? "sm:grid-cols-1" : "sm:grid-cols-2"}`}>
                 {project.images.map((src, index) => (
                   <button
                     key={src}
                     type="button"
                     onClick={() => setSelectedImage(src)}
-                    className="overflow-hidden rounded-3xl border border-[#EEEBE3] transition hover:border-[#4338CA]"
+                    className={`overflow-hidden rounded-[1.5rem] border border-[#E7E2D9] bg-[#F7F6F3] p-2 shadow-[0_10px_24px_rgba(20,24,29,0.05)] transition hover:border-[#4338CA] hover:shadow-[0_12px_26px_rgba(67,56,202,0.12)] ${project.images.length === 1 ? "sm:col-span-1" : ""}`}
                   >
-                    <img
-                      src={src}
-                      alt={`${project.title} screenshot ${index + 1}`}
-                      className="h-[180px] w-full object-cover"
-                    />
+                    <div className={`overflow-hidden rounded-[1.1rem] bg-white ${project.images.length === 1 ? "p-1" : "p-1.5"}`}>
+                      <img
+                        src={src}
+                        alt={`${project.title} screenshot ${index + 1}`}
+                        className={`${project.images.length === 1 ? "h-[300px] sm:h-[390px] lg:h-[460px]" : "h-[180px] sm:h-[220px]"} w-full rounded-[0.9rem] bg-white object-contain object-center"`}
+                        style={{ imageRendering: "auto" }}
+                      />
+                    </div>
                   </button>
                 ))}
               </div>

@@ -32,7 +32,12 @@ export const SOFT_SKILLS = [
 export const SKILLS = [
   { name: "JavaScript", tag: "const", level: "Avançado", Icon: Braces },
   { name: "React", tag: "import", level: "Avançado", Icon: Component },
-  { name: "Material UI", tag: "component", level: "Intermediário", Icon: Component },
+  {
+    name: "Material UI",
+    tag: "component",
+    level: "Intermediário",
+    Icon: Component,
+  },
   { name: "Vue", tag: "template", level: "Intermediário", Icon: Component },
   { name: "Angular", tag: "module", level: "Básico", Icon: Component },
   { name: "HTML/CSS", tag: "tag", level: "Avançado", Icon: Palette },
@@ -64,6 +69,7 @@ export const PROJECTS = [
       "organizar um fluxo de cadastro, edição e exclusão de usuários com persistência no navegador e upload de imagem. A solução foi centralizar o estado do formulário e armazenar os dados com localStorage para manter a consistência da interface.",
     demo: "https://users-management-react.vercel.app/",
     repo: "https://github.com/Jamcarlos1/UsersManagement.React",
+    images: [new URL("../assets/users.png", import.meta.url).href],
   },
   {
     id: "02",
@@ -111,8 +117,9 @@ export const PROJECTS = [
     ],
     challenge:
       "Implementar uma busca dinâmica de artistas consumindo uma API REST fake com JSON Server, manipulando o DOM em tempo real e mantendo um layout responsivo e organizado.",
-    demo: "https://spotify-imersao-alura-efov.vercel.app/",
+    demo: "https://spotify-imersao-alura-78yz.vercel.app/",
     repo: "https://github.com/Jamcarlos1/Spotify-imersao-alura",
+    images: [new URL("../assets/spotify.png", import.meta.url).href],
   },
 ];
 
