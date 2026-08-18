@@ -8,6 +8,12 @@ export function Navbar({ activeSection, scrolled }) {
 
   const textColor = overDarkHero ? "text-white/70" : "text-[#6B6F76]";
 
+  const scrollToContact = (event) => {
+    event.preventDefault();
+    const contactSection = document.getElementById("contato");
+    contactSection?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-20 transition-all duration-300 ${
@@ -52,7 +58,8 @@ export function Navbar({ activeSection, scrolled }) {
 
         <div className="hidden sm:flex items-center gap-2">
           <a
-            href={`mailto:${PROFILE.email}`}
+            href="#contato"
+            onClick={scrollToContact}
             className={`px-4 py-2 rounded-full text-[12.5px] font-medium transition-colors ${
               overDarkHero
                 ? "bg-white text-[#14181D] hover:bg-white/90"
@@ -62,8 +69,9 @@ export function Navbar({ activeSection, scrolled }) {
             Fale comigo
           </a>
           <a
-            href={`mailto:${PROFILE.email}`}
-            aria-label="Enviar e-mail"
+            href="#contato"
+            aria-label="Ir para a seção de contato"
+            onClick={scrollToContact}
             className={`w-9 h-9 rounded-full flex items-center justify-center transition-colors ${
               overDarkHero
                 ? "bg-white/10 text-white hover:bg-white/20"
@@ -103,8 +111,11 @@ export function Navbar({ activeSection, scrolled }) {
             </a>
           ))}
           <a
-            href={`mailto:${PROFILE.email}`}
-            onClick={() => setMenuOpen(false)}
+            href="#contato"
+            onClick={(event) => {
+              setMenuOpen(false);
+              scrollToContact(event);
+            }}
             className="flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-full text-[13px] font-medium bg-[#14181D] text-white"
           >
             Fale comigo <ArrowUpRight size={13} />

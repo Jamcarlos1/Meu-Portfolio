@@ -15,11 +15,16 @@ export function ScrollProgress({ progress }) {
 }
 
 export function BackToTop({ visible }) {
+  const scrollToContact = () => {
+    const contactSection = document.getElementById("contato");
+    contactSection?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+
   return (
     <button
       type="button"
-      aria-label="Voltar ao topo"
-      onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+      aria-label="Ir para a seção de contato"
+      onClick={scrollToContact}
       className={`fixed bottom-6 right-6 w-11 h-11 rounded-full bg-[#14181D] text-white flex items-center justify-center shadow-[0_8px_20px_rgba(20,24,29,0.25)] hover:bg-[#252B32] transition-all duration-300 z-20 ${
         visible
           ? "opacity-100 translate-y-0"

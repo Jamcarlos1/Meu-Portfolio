@@ -14,7 +14,7 @@ export const PROFILE = {
   name: "Jean Carlos da Silva Gonçalves",
   role: "Desenvolvedor Full-Stack Júnior com foco em Front-end",
   pitch:
-    "Desenvolvedor Full-Stack Júnior com foco em Front-end, usando React, TypeScript e Material UI para construir interfaces responsivas e integrações com APIs REST. Atuei em projeto freelancer para consultoria de saúde, participando do levantamento de requisitos, reuniões semanais com o cliente e entregas iterativas. Tenho experiência complementar em backend com AdonisJS, Docker, PostgreSQL e AWS S3, com ajustes pontuais e suporte a integrações. Busco primeira oportunidade ou vaga júnior em equipe ágil para crescer tecnicamente, aprender rápido e contribuir com soluções reais.",
+    "Desenvolvedor Full-Stack Júnior com foco em Front-end, usando React, TypeScript e Material UI para construir interfaces responsivas e integrações com APIs REST. Atuei em projeto freelancer para consultoria de saúde, participando do levantamento de requisitos, reuniões semanais com o cliente e entregas iterativas. Tenho experiência complementar em backend com AdonisJS, Docker, PostgreSQL e AWS S3, com ajustes pontuais e suporte a integrações. Busco oportunidade de vaga júnior em equipe ágil para crescer tecnicamente, aprender rápido e contribuir com soluções reais.",
   github: "https://github.com/Jamcarlos1",
   linkedin:
     "https://www.linkedin.com/in/jean-carlos-da-silva-gon%C3%A7alves-a95448100/",
@@ -89,8 +89,10 @@ export const PROJECTS = [
     ],
     challenge:
       "Desenvolver a maior parte do front-end e ajustar pontos específicos no back-end para suportar upload seguro de arquivos para AWS S3. A solução incluiu comunicação contínua com o cliente e entrega de uma plataforma modular capaz de atender às necessidades da consultoria de saúde.",
-    demo: null, // projeto privado — código do cliente
-    repo: null, // projeto privado — código do cliente
+    demo: null,
+    repo: null,
+    confidentialNote:
+      "Projeto confidencial — o código pertence ao cliente e não pode ser compartilhado publicamente.",
     images: [
       new URL("../assets/grp-01-home.png", import.meta.url).href,
       new URL("../assets/grp-02-home-sidebar.png", import.meta.url).href,
